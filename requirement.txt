@@ -1,22 +1,19 @@
-# --- Web app ---
+
+# Web app
 streamlit>=1.40,<2.0
 plotly>=5.20,<7.0
 
-# --- Detection ---
+# Detection
 ultralytics>=8.3,<9.0
-opencv-python-headless>=4.10,<5.0
-numpy>=1.26,<3.0
+opencv-python-headless==4.10.0.84
+numpy>=1.26,<2.0
 Pillow>=10.0
 pandas>=2.0
 
-# --- ParkVision Reserve (new) ---
-# Time-zone database for booking times. Needed on Windows; harmless elsewhere.
+# Time-zone support
 tzdata
-# Optional: only used if OpenCV's built-in QR encoder is unavailable. Not required.
-# qrcode>=7.4
 
-# --- PyTorch (CPU build: small enough for Streamlit Community Cloud) ---
-# Remove these three lines if you want GPU PyTorch on your own Windows PC.
+# CPU PyTorch
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch
 torchvision
