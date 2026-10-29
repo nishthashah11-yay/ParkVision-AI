@@ -3,7 +3,7 @@
 streamlit>=1.40,<2.0
 plotly>=5.20,<7.0
 
-# Detection
+# Computer vision
 ultralytics>=8.3,<9.0
 opencv-python-headless==4.10.0.84
 numpy>=1.26,<2.0
