@@ -17,7 +17,7 @@ APP_DIR = Path(__file__).resolve().parent
 MODEL_PATH = APP_DIR / "models" / "best.pt"
 
 st.set_page_config(
-    page_title="SpaceLot | Smart Parking",
+    page_title="ParkVision AI | Smart Parking",
     page_icon="🅿️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -321,7 +321,7 @@ def get_congestion(occupancy):
 # SIDEBAR
 # ---------------------------------------------------------
 with st.sidebar:
-    st.markdown("## 🅿️ SpaceLot")
+    st.markdown("## 🅿️ ParkVision AI")
     st.caption("SMART PARKING INTELLIGENCE")
     st.divider()
 
@@ -513,7 +513,7 @@ if uploaded_file is not None:
             st.image(original_image, use_container_width=True)
 
         with view_right:
-            st.markdown("**SpaceLot detections**")
+            st.markdown("**ParkVision AI detections**")
             st.image(annotated, use_container_width=True)
 
         # Optional detection table and export.
@@ -529,7 +529,7 @@ if uploaded_file is not None:
             st.download_button(
                 label="Download detection report (CSV)",
                 data=csv_bytes,
-                file_name=f"SpaceLot_report_{datetime.now():%Y%m%d_%H%M%S}.csv",
+                file_name=f"parkvision_report_{datetime.now():%Y%m%d_%H%M%S}.csv",
                 mime="text/csv",
                 use_container_width=True
             )
@@ -561,4 +561,4 @@ else:
         st.write("Review occupancy estimates and availability insights.")
 
 st.divider()
-st.caption("SpaceLot · AI-assisted parking occupancy analysis")
+st.caption("PARKVISION AI · AI-assisted parking occupancy analysis")
